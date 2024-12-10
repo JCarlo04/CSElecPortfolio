@@ -1,0 +1,242 @@
+/* General Reset */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content container (header, main, etc.) */
+main {
+    flex: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #7393B3;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #000000;
+}
+
+header .container {
+    position: relative;
+    padding-left: 100px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #fff;
+    padding: 10px 0;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #7393B3;
+}
+
+/* Sections */
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.skills-grid div {
+    background: #7393B3;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.live,
+.mydawg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Social links */
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+footer .social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+footer .social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo {
+        width: 60px; /* Reduce logo size */
+        height: 60px;
+    }
+
+    header .container {
+        padding-left: 80px; /* Adjust padding for smaller logo */
+    }
+
+    .logo {
+        width: 50px; /* Further reduce logo size */
+        height: 50px;
+    }
+
+    header .container {
+        padding-left: 70px; /* Adjust padding to maintain spacing */
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-grid div {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .portfolio-item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .skills-grid div {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-item {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
