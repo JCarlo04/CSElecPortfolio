@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="design.css">
+    <script src="carousel.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -14,12 +16,11 @@
             <p>Developer | Student | Lover</p>
         </div>
     </header>
-    
     <nav>
         <ul class="container">
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -27,46 +28,109 @@
     <main>
         <section id="about" class="container">
             <h2>About Me</h2>
-            <p style="text-align: center;">I'm a 2nd year Computer Science student. I tend to code on that thang in my free time</p>
+            <p class="about">I'm a 2nd year Computer Science student. I tend to code on that thang in my free time. This website portfolio is a showcase of different coding projects that I've done throughout my two years in Lyceum.
+                
+            </p>
         </section>
 
         <section id="portfolio" class="container">
             <h2>1st Year Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">Project 1</div>
-                <div class="portfolio-item">Project 2</div>
-                <div class="portfolio-item">Project 3</div>
-                <div class="portfolio-item">Project 4</div>
+            <h2 class="click">Click the images to get directed to the project links!</h2>
+            <div class="carousel" id="first-year-projects">
+                <div class="carousel-item" data-title="AstraiOS Lunar Calendar System">
+                    <a href="https://github.com/JCarlo04/AstraiOS-Lunar-Calendar-System">
+                        <img src="astraiOS.png" alt="astraiOS" width="1100" height="300">
+                    </a>
+                </div>
+                <div class="carousel-item" data-title="Movie Catalog System">
+                    <a href="https://github.com/JCarlo04/Movie-Catalog-System">
+                        <img src="moviecatalog.png" alt="moviecatalog" width="1100" height="300">
+                    </a>
+                </div>
+                <div class="carousel-item" data-title="Revenue Viewing System">
+                    <a href="https://github.com/JCarlo04/Revenue-Viewing-HTML-">
+                        <img src="revenue.png" alt="moviecatalog" width="1100" height="300">
+                    </a>
+                </div>
+                <div class="carousel-item" data-title="Bank Management System">
+                    <a href="https://github.com/JCarlo04/Bank-Management-System">
+                        <img src="bank-management.png" alt="moviecatalog" width="1100" height="300">
+                    </a>
+                </div>
+                <div class="carousel-item" data-title="Payment HRIS System">
+                    <a href="https://github.com/JCarlo04/Payment-HRIS-System">
+                        <img src="hris.png" alt="moviecatalog" width="1100" height="300">
+                    </a>
+                </div>
+                <div class="carousel-item" data-title="Basic HTML Profile Website">
+                    <a href="https://github.com/JCarlo04/Basic-HTML-Profile-Website">
+                        <img src="profile.png" alt="moviecatalog" width="1100" height="300">
+                    </a>
+                </div>
             </div>
+            <div class="carousel-title" id="first-year-title">1st Year Projects</div>
         </section>
-
-        <img src="live.png" alt="Livestream" class="live">
+        
 
         <section id="portfolio" class="container">
-            <h2>2nd Year Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">Project 1</div>
-                <div class="portfolio-item">Project 2</div>
-                <div class="portfolio-item">Project 3</div>
-                <div class="portfolio-item">Project 4</div>
+            <h2><br>2nd Year Projects</h2>
+            <h2 class="click">Click the images to get directed to the project links!</h2>
+            <div class="carousel" id="second-year-projects">
+                <div class="carousel-item" data-title="Student Management System with GUI">
+                    <a href="https://github.com/JCarlo04/Student-Management-System-w-GUI">
+                        <img src="stardew.png" alt="stardew" width="1100" height="300">
+                    </a>
+                </div>
+                <div class="carousel-item" data-title="TKinter Calculator">
+                    <a href="https://github.com/JCarlo04/TKinter-Calculator-">
+                        <img src="calculator.png" alt="calculator" width="1100" height="300">
+                    </a>
+                </div>
+                <div class="carousel-item" data-title="Terminal-Based Student Management System">
+                    <a href="https://github.com/JCarlo04/Terminal-Based-Student-Management-System">
+                        <img src="student-management-system.png" alt="student-management-system" width="1100" height="300">
+                    </a>
+                </div>
+                <div class="carousel-item" data-title="Web Development Website">
+                    <a href="https://github.com/JCarlo04/WebDevWebsite">
+                        <img src="hawk2a.png" alt="hawk2a" width="1100" height="300">
+                    </a>
+                </div>
             </div>
+            <div class="carousel-title" id="second-year-title">Title will appear here</div>
         </section>
-
-        <img src="mydawg.png" alt="Livestream" class="mydawg">
+        
 
         <section id="skills" class="container">
-            <h2>Skills</h2>
+            <h2><br>Skills</h2>
             <div class="skills-grid">
-                <div>HTML</div>
-                <div>CSS</div>
-                <div>SQL</div>
-                <div>Python</div>
+                <div class="skill" title="HTML">
+                    <img src="htmllogo.png" alt="HTML"
+                     width = 70
+                     height = 70>
+                </div>
+                <div class="skill" title="CSS">
+                    <img src="css.svg" alt="CSS"
+                     width = 70
+                     height = 70>
+                </div>
+                <div class="skill" title="SQL">
+                    <img src="sql.png" alt="SQL"
+                     width = 100
+                     height = 60>
+                </div>
+                <div class="skill" title="Python">
+                    <img src="python.png" alt="Python"
+                     width = 70
+                     height = 70>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
+            <section id="contact">
             <div class="social-links">
                 <a href="https://www.facebook.com/jcgoot22/" target="_blank">
                     <img src="fblogo.png" alt="Facebook" class="social-icon">
@@ -78,6 +142,7 @@
                     <img src="github.png" alt="GitHub" class="social-icon">
                 </a>
             </div>
+            </section>
             <p>&copy; 2024 John Carlo. All rights reserved.</p>
         </div>
     </footer>

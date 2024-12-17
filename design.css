@@ -1,4 +1,4 @@
-/* General Reset */
+
 html, body {
     height: 100%;
     margin: 0;
@@ -6,7 +6,6 @@ html, body {
     flex-direction: column;
 }
 
-/* Main content container (header, main, etc.) */
 main {
     flex: 1;
 }
@@ -18,6 +17,7 @@ main {
 }
 
 body {
+    background-image: url("background.png");
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -30,7 +30,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+
 header {
     background: #7393B3;
     color: #fff;
@@ -63,7 +63,13 @@ header .container {
     padding-left: 100px;
 }
 
-/* Navigation */
+.about {
+    text-align: center;
+    font-family: myFirstFont;
+    src: url(SansationLight.woff);
+    font-size: larger;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -99,7 +105,13 @@ section h2 {
     font-size: 2rem;
 }
 
-/* Skills */
+.click {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -115,7 +127,6 @@ section h2 {
     border-radius: 5px;
 }
 
-/* Portfolio */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -139,7 +150,6 @@ section h2 {
     padding-top: 20px;
 }
 
-/* Footer */
 footer {
     background: #333;
     color: #fff;
@@ -147,7 +157,6 @@ footer {
     padding: 20px 0;
 }
 
-/* Social links */
 footer .social-links {
     display: flex;
     justify-content: center;
@@ -167,28 +176,27 @@ footer .social-icon:hover {
     transform: scale(1.1);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.8rem;
     }
 
     .logo {
-        width: 60px; /* Reduce logo size */
+        width: 60px; 
         height: 60px;
     }
 
     header .container {
-        padding-left: 80px; /* Adjust padding for smaller logo */
+        padding-left: 80px;
     }
 
     .logo {
-        width: 50px; /* Further reduce logo size */
+        width: 50px; 
         height: 50px;
     }
 
     header .container {
-        padding-left: 70px; /* Adjust padding to maintain spacing */
+        padding-left: 70px;
     }
 
     header p {
@@ -240,3 +248,97 @@ footer .social-icon:hover {
         height: 25px;
     }
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel:hover {
+    cursor: pointer;
+}
+
+/* Carousel title styling */
+.carousel-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Title animation */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        height: 200px;
+    }
+    .carousel-item img {
+        object-fit: contain;
+        height: 100%;
+        width: auto;
+    }
+    .carousel-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 150px;
+    }
+    .carousel-title {
+        font-size: 0.9rem;
+    }
+}
+
